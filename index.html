@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API GET Call</title>
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./jqcrud.js"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css"/>
+    <link rel="stylesheet" href="./jqstyles.css" />
+</head>
+<body class="container">
+    <h1>Recipies API Client</h1>
+    <div class="form-group">
+      <label for="">Title</label>
+      <input type="text"
+        class="form-control" name="title" id="title" aria-describedby="helpId" placeholder="Title of Recipie">
+      <small id="titleHelp" class="form-text text-muted">Enter Title of Recipie</small>
+    </div>
+    <div class="form-group">
+      <label for="">Body</label>
+      <input type="text"
+        class="form-control" name="body" id="body" aria-describedby="helpId" placeholder="Recipie Detail">
+      <small id="bodyhelp" class="form-text text-muted">Enter Detail</small>
+    </div>
+    <button class="btn btn-info" id="addRecipie">Add Recipie</button>
+    <div id="recipies">
+        Loading ....
+    </div>
+
+    <div class="modal fade" id="updateModel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Recipie</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="updateId">
+                    <div class="form-group">
+                      <label for="">Title</label>
+                      <input type="text"
+                        class="form-control" name="updateTitle" id="updateTitle" aria-describedby="helpId" placeholder="">
+                      <small id="updateTitlehelpId" class="form-text text-muted">Help text</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Body</label>
+                      <textarea class="form-control" name="updateBody" id="updateBody" rows="3"></textarea>
+                    </div>                  
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" id="updateSave">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
